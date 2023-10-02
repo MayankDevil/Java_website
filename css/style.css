@@ -1,0 +1,232 @@
+/*
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./index.html
+*/
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji";
+    color: var(--white);
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root 
+{
+    --white: #efefef;
+    --light: #b6cfcf;
+    --lgreen: #2ecc71;
+    --dgreen: #27ae60;
+    --dark: #34495e;
+    --black: #2c3e50;
+}
+
+::-webkit-scrollbar
+{
+    width: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: transparent;
+    border: 1px solid var(--dgreen);
+    border-radius: 1rem;
+}
+
+::selection
+{
+    color: var(--dgreen);
+    background: var(--dark);
+}
+
+::marker
+{
+    list-style: symbols();
+    color: var(--dgreen);
+}
+
+#main
+{
+    height:100vh;
+    width:100%;
+    display: flex;
+    //grid-template-columns: 3fr 1fr;
+    overflow:hidden;
+}
+
+/*
+    body css -------------------------------
+*/
+body
+{
+    background-color: var(--black);
+}
+
+/*
+    aside css ------------------------------
+*/
+#aside
+{
+    width: 300px;
+    margin-left:-10px;
+    min-height: 90vh;
+    padding: 1rem 0;
+    background: var(--dark);
+    background:black;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 2px 2px 10px 5px var(--black);
+    overflow:auto;
+}
+#aside a
+{
+    display: block;
+    color:var(--light);
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}
+#aside a:hover
+{
+    color: var(--dgreen);
+    background: var(--black);
+    border-radius: 0 1.5rem 1.5rem 0;
+    border-left: 4px solid var(--black);
+    margin-left: -4px;
+}
+#search_fld
+{
+    display:block;
+    margin:0.5rem 1rem;
+    padding: 5px 10px;
+    color:var(--dgreen);
+    background:transparent;
+    border:2px solid var(--dark);
+    border-radius:1rem;
+}
+#search_fld:focus
+{
+    border-color:var(--dgreen);
+}
+/*
+    container css -----------------------------
+*/
+#container
+{
+    width:100%;
+    overflow:auto;
+}
+#header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: var(--black);
+}
+
+#menu_button {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background: transparent;
+    border-radius: 10px;
+}
+
+#menu_button:hover {
+    box-shadow: 1px 1px 10px var(--lgreen);
+}
+
+h2
+{
+    color: var(--black);
+    text-shadow: 1px 1px 0px var(--dgreen);
+    //animation: text-light 1s linear infinite alternate;
+}
+
+@keyframes text-light {
+    form {
+        text-shadow: 1px 1px 3px var(--dgreen);
+    }
+
+    to {
+        text-shadow: 1px 1px 5px var(--lgreen);
+    }
+}
+
+/*
+    content css -----------------------------
+*/
+#content_frame
+{
+    min-height: 90vh;
+    width: 100%;
+}
+
+/*
+    footer css ------------------------------
+*/
+#footer
+{
+    margin: 1rem 2rem 2rem 1rem;
+    padding: 1rem;
+    color: var(--black);
+    background: linear-gradient(to right, var(--dgreen), var(--lgreen));
+    border-radius:1.5rem;
+    animation: border-shine 2s linear infinite alternate;
+}
+#footer > a
+{
+    color:var(--black);
+    font-weight:600;
+}
+#footer > a:hover
+{
+    font-weight:500;
+}
+
+@keyframes border-shine {
+    form {
+        box-shadow: 1px 1px 3px var(--lgreen);
+    }
+
+    to {
+        box-shadow: 1px 1px 10px var(--lgreen);
+    }
+}
+/*
+    responsive css ------------------------------
+*/
+@media screen and (max-width:578px) {
+    #main {
+        grid-template-columns: 1fr !important;
+    }
+
+    #aside {
+        width: 90%;
+        margin: auto;
+        position: absolute;
+        z-index: 100%;
+        left: 5%;
+        top: 10% !important;
+        border-radius: 1rem !important;
+    }
+    #aside a {
+        margin: 0 1rem !important;
+        padding: 1rem 2rem;
+        border: 1px solid transparent !important;
+        border-radius: 1rem !important;
+    }
+    #aside a:hover {
+        border-color: var(--lgreen) !important;
+    }
+    #search_fld
+    {
+        width:90%;
+    }
+}
+
