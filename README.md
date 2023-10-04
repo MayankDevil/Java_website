@@ -34,11 +34,11 @@
 
 ### Web Page
 
-![Alt text](./data/HomePage.png "HomePage")
+![Alt text](./data/LearnCoreJava.png "HomePage")
 
 ### Responsive
 
-**Breakpoints** { 400 | 576 | 768 | 992 | 1200 }
+**Breakpoints** { 576 | 7681200 }
 
 ### Theme Mode
 

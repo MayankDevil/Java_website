@@ -18,12 +18,15 @@
 
 :root 
 {
+    --red:#dc3545;
     --white: #efefef;
     --light: #b6cfcf;
     --lgreen: #2ecc71;
     --dgreen: #27ae60;
     --dark: #34495e;
+    --green: #007e00;
     --black: #2c3e50;
+    --night:#000;
 }
 
 ::-webkit-scrollbar
@@ -41,8 +44,8 @@
 
 ::selection
 {
-    color: var(--dgreen);
-    background: var(--dark);
+    color: var(--light);
+    background: var(--night);
 }
 
 ::marker
@@ -77,8 +80,7 @@ body
     margin-left:-10px;
     min-height: 90vh;
     padding: 1rem 0;
-    background: var(--dark);
-    background:black;
+    background: var(--night);
     border-radius: 1rem 0 0 1rem;
     box-shadow: 2px 2px 10px 5px var(--black);
     overflow:auto;
@@ -101,12 +103,12 @@ body
 #search_fld
 {
     display:block;
-    margin:0.5rem 1rem;
-    padding: 5px 10px;
-    color:var(--dgreen);
+    margin:1rem;
+    padding: 0.5rem 10px;
+    color:var(--lgreen);
     background:transparent;
-    border:2px solid var(--dark);
-    border-radius:1rem;
+    border:2px solid var(--lgreen);
+    border-radius:10px;
 }
 #search_fld:focus
 {
@@ -165,8 +167,73 @@ h2
 {
     min-height: 90vh;
     width: 100%;
+    overflow:hidden;
 }
-
+.container_fluid
+{
+    height:100%;
+    width:100%;
+    padding:2rem;
+}
+h1,h3,h4,h5
+{
+    padding:1rem 0;
+    color:var(--dark);
+}
+:is(h1,h3,h4,h5)::before
+{
+    content:'#';
+    color:var(--green);
+}
+p
+{
+    padding:1rem 0;
+    line-height:2rem;
+    color:var(--light);
+}
+ul
+{
+    border-left:5px solid var(--dark);
+}
+ul li
+{
+    list-style:symbols('-');
+    list-style:none;
+}
+ul li::before
+{
+    content:'-';
+    font-size:3rem;
+    // border:3px solid var(--dark);
+    color:var(--dark);
+}
+.console1,
+.console2,
+.console3
+{
+    margin:2rem;
+    padding:1rem;
+    color:var(--lgreen);
+    background:var(--dark);
+    border-radius:1rem;
+    box-shadow: 2px 2px 10px 5px var(--black);
+}
+.console1
+{
+    font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    color:var(--night);
+    background:var(--light);
+    border-radius:1rem;
+    box-shadow: 2px 2px 10px 5px var(--black);
+}
+.console3
+{
+    margin:1rem;
+    background:var(--night);
+}
+:is(.console1,.console2)::selection
+{
+}
 /*
     footer css ------------------------------
 */
