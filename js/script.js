@@ -43,7 +43,7 @@ try
 
         console.log(element)
                 
-        var souceFileURL = `https://github.com/MayankDevil/LearnCoreJava/${element}.java`
+        var souceFileURL = `./data/html/${element}.html`
             
         aside.insertAdjacentHTML("beforeend",`<a href='${souceFileURL}' target="myFrame"> ${element} </a>`)            
     })

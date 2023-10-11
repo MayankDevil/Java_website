@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> class & object </h1>
+        
+        <ul>
+            <li> class is blue print of any object that have locate memory by create object. </li>
+            <li> class is also is collection of member variables or functions, </li>
+            <li> In java class is also a datatype. </li>
+            <li> object is real entity the is represent class in real world. </li>
+            <li> in java object not take address of class it take only reference of class that make classes secure. </li>
+        </ul>
+        
+        <h4> syntax : class </h4>
+        
+<pre class="console3">
+accessspecifier class ClassName { // member }
+</pre>
+
+        <h4> syntax : object </h4>
+
+<pre class="console3">
+new Constructor().member;
+</pre>
+
+        <h4> syntax : reference object </h4>
+
+<pre class="console3">
+ClassName refference_variable = new Constructor();
+</pre>
+        
+<pre class="console1">
+class A
+{
+	int n; // instance variable : that is comman for  member function and it default value is set by javac
+
+	/*
+		integer 	0
+		float  		0,0
+		charactor 	' '
+		boolean		false
+	*/
+
+	void f()
+	{
+		n = 10;
+	}
+}
+class B
+{
+	void f()
+	{
+		int n; // local variable : that declare in any function have not any default value.
+		n = 12; // that not print without assign any value.
+	}
+}
+class C
+{
+	public static void main(String args[])
+	{
+		A a = new A();
+		B b = new B();
+
+		a.f();
+		b.f();
+
+		System.out.println(" a.n "+a.n);
+	}
+}
+</pre>
+        
+<pre class="console2">
+
+</pre>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->

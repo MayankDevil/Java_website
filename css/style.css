@@ -4,6 +4,7 @@
 -	Copyright by Mayank
 -	HTML : ./index.html
 */
+
 *
 {
     margin: 0;
@@ -18,15 +19,15 @@
 
 :root 
 {
-    --red:#dc3545;
-    --white: #efefef;
-    --light: #b6cfcf;
-    --lgreen: #2ecc71;
-    --dgreen: #27ae60;
-    --dark: #34495e;
-    --green: #007e00;
-    --black: #2c3e50;
-    --night:#000;
+    --primary:#2ecc71;
+    --secondary:#27ae60;
+    --black:#2f3640;
+    --dark:#353b48;
+    --fade:#95afc0;
+    --gray:#2c3e50;
+    --dark-gray:#7f8fa6;
+    --light:#f5f6fa;
+    --white:#dcdde1;
 }
 
 ::-webkit-scrollbar
@@ -38,20 +39,20 @@
 ::-webkit-scrollbar-thumb
 {
     background: transparent;
-    border: 1px solid var(--dgreen);
+    border: 1px solid var(--secondary);
     border-radius: 1rem;
 }
 
 ::selection
 {
     color: var(--light);
-    background: var(--night);
+    background: #000;
 }
 
 ::marker
 {
     list-style: symbols();
-    color: var(--dgreen);
+    color: var(--secondary);
 }
 
 #main
@@ -59,7 +60,7 @@
     height:100vh;
     width:100%;
     display: flex;
-    //grid-template-columns: 3fr 1fr;
+    //grid-template-columns: 60% 40%;
     overflow:hidden;
 }
 
@@ -76,43 +77,46 @@ body
 */
 #aside
 {
-    width: 300px;
+    width: 400px;
     margin-left:-10px;
     min-height: 90vh;
     padding: 1rem 0;
-    background: var(--night);
-    border-radius: 1rem 0 0 1rem;
-    box-shadow: 2px 2px 10px 5px var(--black);
+    background: var(--gray);
+    border-radius: 1.5rem 0 0 1.5rem;
+    box-shadow: 10px 10px 20px 5px var(--gray);
     overflow:auto;
 }
 #aside a
 {
     display: block;
-    color:var(--light);
+    margin-right:2rem;
     padding: 0.5rem 1rem;
-    margin-right: 1rem;
+    font-size:1rem;
+    border-radius:0 1rem 1rem 0;
+    color:var(--light);
 }
 #aside a:hover
 {
-    color: var(--dgreen);
-    background: var(--black);
-    border-radius: 0 1.5rem 1.5rem 0;
-    border-left: 4px solid var(--black);
-    margin-left: -4px;
+    font-weight:bolder;
+    color: var(--gray);
+    background: var(--secondary);
+    // border-radius: 0 1.5rem 1.5rem 0;
 }
 #search_fld
 {
+    width:90%;
     display:block;
-    margin:1rem;
-    padding: 0.5rem 10px;
-    color:var(--lgreen);
+    margin:1rem 5%;
+    padding: 0.5rem;
+    font-size:1rem;
+    color:var(--primary);
     background:transparent;
-    border:2px solid var(--lgreen);
+    border:2px solid var(--primary);
     border-radius:10px;
 }
 #search_fld:focus
 {
-    border-color:var(--dgreen);
+    border-color:var(--primary);
 }
 /*
     container css -----------------------------
@@ -140,23 +144,23 @@ body
 }
 
 #menu_button:hover {
-    box-shadow: 1px 1px 10px var(--lgreen);
+    box-shadow: 1px 1px 10px var(--secondary);
 }
 
 h2
 {
-    color: var(--black);
-    text-shadow: 1px 1px 0px var(--dgreen);
-    //animation: text-light 1s linear infinite alternate;
+    color: var(--dark);
+    text-shadow: 1px 1px 0px var(--secondary);
+    animation: text-light 1s linear infinite alternate;
 }
 
 @keyframes text-light {
     form {
-        text-shadow: 1px 1px 3px var(--dgreen);
+        text-shadow: 1px 1px 3px var(--secondary);
     }
 
     to {
-        text-shadow: 1px 1px 5px var(--lgreen);
+        text-shadow: 1px 1px 5px var(--primary);
     }
 }
 
@@ -178,22 +182,23 @@ h2
 h1,h3,h4,h5
 {
     padding:1rem 0;
-    color:var(--dark);
+    color:var(--dark-gray);
 }
 :is(h1,h3,h4,h5)::before
 {
     content:'#';
-    color:var(--green);
+    color:var(--secondary);
 }
 p
 {
     padding:1rem 0;
     line-height:2rem;
+    font-size:1.1rem;
     color:var(--light);
 }
 ul
 {
-    border-left:5px solid var(--dark);
+    border-left:5px solid var(--gray);
 }
 ul li
 {
@@ -204,8 +209,19 @@ ul li::before
 {
     content:'-';
     font-size:3rem;
-    // border:3px solid var(--dark);
-    color:var(--dark);
+    // border:3px solid var(--gray);
+    color:var(--gray);
+}
+ol
+{
+    padding: 1rem;
+}
+ol li
+{
+    margin-left:1rem;
+    line-height:2rem;
+    font-size:1.1rem;
+    color:;
 }
 .console1,
 .console2,
@@ -213,26 +229,33 @@ ul li::before
 {
     margin:2rem;
     padding:1rem;
-    color:var(--lgreen);
+    color:var(--primary);
     background:var(--dark);
     border-radius:1rem;
     box-shadow: 2px 2px 10px 5px var(--black);
+    overflow-x:auto;
 }
 .console1
 {
     font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    color:var(--night);
-    background:var(--light);
+    color:var(--black);
+    color:#000;
+    background:var(--fade);
     border-radius:1rem;
-    box-shadow: 2px 2px 10px 5px var(--black);
+    box-shadow: 2px 2px 10px 5px var(--dark);
 }
 .console3
 {
     margin:1rem;
-    background:var(--night);
+    background:var(--gray);
 }
-:is(.console1,.console2)::selection
+:is(.console1,.console2,.console3)::-webkit-scrollbar
 {
+    background: transparent;
+}
+:is(.console1,.console2,.console3)::-webkit-scrollbar-thumb
+{
+    background: var(--dark);
 }
 /*
     footer css ------------------------------
@@ -242,13 +265,13 @@ ul li::before
     margin: 1rem 2rem 2rem 1rem;
     padding: 1rem;
     color: var(--black);
-    background: linear-gradient(to right, var(--dgreen), var(--lgreen));
+    background: linear-gradient(to right, var(--secondary), var(--primary));
     border-radius:1.5rem;
     animation: border-shine 2s linear infinite alternate;
 }
 #footer > a
 {
-    color:var(--black);
+    color:var(--dark);
     font-weight:600;
 }
 #footer > a:hover
@@ -258,17 +281,17 @@ ul li::before
 
 @keyframes border-shine {
     form {
-        box-shadow: 1px 1px 3px var(--lgreen);
+        box-shadow: 1px 1px 3px var(--secondary);
     }
 
     to {
-        box-shadow: 1px 1px 10px var(--lgreen);
+        box-shadow: 1px 1px 10px var(--primary);
     }
 }
 /*
     responsive css ------------------------------
 */
-@media screen and (max-width:578px) {
+@media screen and (max-width:600px) {
     #main {
         grid-template-columns: 1fr !important;
     }
@@ -286,14 +309,16 @@ ul li::before
         margin: 0 1rem !important;
         padding: 1rem 2rem;
         border: 1px solid transparent !important;
-        border-radius: 1rem !important;
-    }
-    #aside a:hover {
-        border-color: var(--lgreen) !important;
+        border-radius: 5px !important;
     }
     #search_fld
     {
         width:90%;
+        margin:0 auto;
+        padding:1rem;
+        border:none;
+        border-radius:0;
+        border-bottom:2px solid var(--primary);
     }
 }
 

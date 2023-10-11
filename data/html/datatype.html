@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/datatype.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> Variable & Datetype </h1>
+        
+        <p> variable is a container in momeory that hold any value. The value hold in variable have different size of type that criteria called datatype.  </p>
+        
+<pre class="console3">
+--------------------------------------------
+| datatype	        size	    values
+--------------------------------------------
+  byte 		        1byte	    integer
+  short		        2byte	    integer
+  int			    4byte	    integer
+  long		        8byte	    integer
+  float		        4byte	    real
+  double		    8byte	    real
+  char		        2byte	    charactor
+  boolean		    1bit	    true|false
+--------------------------------------------
+</pre>
+        
+<pre class="console1">
+class Test
+{
+	public static void main(String args[])
+	{
+		byte byte_datatype = 1;
+		short short_datatype = 12345;
+		int int_datatype = 91252222;
+		long long_datatype = 232332131;
+
+		float float_datatype = 100.0099f;
+		double double_datatype = 2323.00001;
+
+		char char_datatype = 'x';
+
+		boolean boolean_datatype = true;
+
+		System.out.println(
+			"\n"+byte_datatype+
+			"\n"+short_datatype+
+			"\n"+int_datatype+
+			"\n"+long_datatype+
+			"\n"+float_datatype+
+			"\n"+double_datatype+
+			"\n"+char_datatype+
+			"\n"+boolean_datatype
+		);
+	}
+}
+</pre>
+        
+<pre class="console2">
+1
+12345
+91252222
+232332131
+100.0099
+2323.00001
+x
+true
+</pre>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->

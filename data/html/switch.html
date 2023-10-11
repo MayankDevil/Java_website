@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> switch statement </h1>
+        
+        <ul>
+            <li> switch is control statement that control flow of execution. </li>
+            <li> it use if we are compare case value then execute code. </li>
+            <li> we are use "break" keyword for stop for execute next case. </li>
+            <li> we have "default" case in last that execute if not case work. </li>
+            <li> but we are use also create some code with the help of "nested if else". </li>
+        </ul>
+        
+        <h3> control flow </h3>
+        
+        <ol>
+            <li> check switch expression. </li>
+            <li> match case first to last. </li>
+            <li> if case match execute code. </li>
+            <li> if not any case match execute default. </li>
+        </ol>
+        
+<pre class="console3">
+switch (expression) { case value : //code break; case value : //code break; ... defautl : //code }
+</pre>
+        
+<pre class="console1">
+class Test
+{
+	public static void main(String args[])
+	{
+		int n = 0, n1 = 2, n2 = 3;
+
+		switch (3)
+		{
+			case 1 : n = n1 + n2; break;
+
+			case 2 : n = n1 + n2; break;
+
+			case 3 : n = n1 + n2; break;
+
+			case 4 : n = n1 + n2; break;
+
+			case 5 : n = n1 + n2; break;
+
+			default : n = 0;
+		}
+		System.out.println(n);
+	}
+}
+</pre>
+        
+<pre class="console2">
+6
+</pre>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->

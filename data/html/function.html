@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> function </h1>
+        
+        <ul>
+            <li> function is set of code in bloack that have name. </li>
+            <li> in java we have not declare function we complusary to define, not in case interface. </li>
+            <li> we are not call non-static funtion without object. </li>
+            <li> we are called mutliple time one function. </li>
+            <li> we only call function inside the function. </li>
+            <li> default accesspecifier is [ defualt ] type. </li>
+        </ul>
+        
+        <h3> control flow </h3>
+        
+        <ol>
+            <li> we have three type function.
+            <li> void function : that return type void mean null. </li>
+            <li> perimeter function : that call we can pass arguments. </li>
+            <li> return function : that return some data. </li>
+        </ol>
+        
+        <h4> syntax </h4>
+<pre class="console3">
+accesspecifer returntype function_name(datatype argument,...){ //code }
+</pre>
+        
+<pre class="console1">
+class Test
+{
+	public static void main(String args[])
+	{
+		Test t = new Test();
+
+		t.null_function();
+
+		t.perimeter_function(true);
+
+		System.out.println(return_function());
+	}
+	void null_function()
+	{
+		System.out.println("just execute code");
+	}
+	void perimeter_function(boolean arguments)
+	{
+		System.out.println("if pass argument that it call");
+	}
+	static int return_function()
+	{
+		return 3;
+	}
+}
+</pre>
+        
+<pre class="console2">
+just execute code
+if pass argument that it call
+3
+</pre>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->
