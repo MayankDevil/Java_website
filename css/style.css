@@ -89,34 +89,34 @@ body
 #aside a
 {
     display: block;
-    margin-right:2rem;
+    margin-right:1rem;
     padding: 0.5rem 1rem;
     font-size:1rem;
     border-radius:0 1rem 1rem 0;
     color:var(--light);
 }
-#aside a:hover
+#aside :is(a:hover,a:active)
 {
     font-weight:bolder;
     color: var(--gray);
     background: var(--secondary);
     // border-radius: 0 1.5rem 1.5rem 0;
 }
-#search_fld
+#searchBar
 {
     width:90%;
     display:block;
-    margin:1rem 5%;
+    margin:0.5rem 5% 1rem 5%;
     padding: 0.5rem;
     font-size:1rem;
     color:var(--primary);
     background:transparent;
     border:2px solid var(--primary);
-    border-radius:10px;
+    border-radius:5px;
 }
-#search_fld:focus
+#searchBar:focus
 {
-    border-color:var(--primary);
+    border-color:var(--dark-gray);
 }
 /*
     container css -----------------------------
@@ -198,7 +198,7 @@ p
 }
 b
 {
-    font-style:italic   ;
+    font-style:italic;
 }
 ul
 {
@@ -316,7 +316,7 @@ ol li
         border: 1px solid transparent !important;
         border-radius: 5px !important;
     }
-    #search_fld
+    #searchBar
     {
         width:90%;
         margin:0 auto;

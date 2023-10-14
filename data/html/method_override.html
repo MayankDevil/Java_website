@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/.html
+-	HTML : ./data/html/method_override.html
 -->
 <html lang="en">
 
@@ -29,18 +29,52 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> method override </h1>
+        
+        <ul>
+            <li> it is use to update or chagne function functionality. </li>
+            <li> overrideing is method to change superclass function functionality in subclass. </li>
+            <li> method override is require inhertance. </li>
+            <li> require same { returntype | functionname | arugments }. </li>
+            <li> but accesspecifer require same or higher. </li>
+        </ul>
+        
+        <h4> syntax </h4>
         
 <pre class="console3">
-
+same_or_higher_accessspecifer samereturntype samefunctionname(samearguments){ // override code }
 </pre>
+
+        <h4> example </h4>
         
 <pre class="console1">
-
+class SuperClass
+{
+	void display()
+	{
+		System.out.print(4+5);
+	}
+}
+class SubClass
+{
+	void display()
+	{
+		System.out.println("override function functionality");
+	}
+}
+class Test
+{
+	public static void main(String args[])
+	{
+		new SubClass().display(); // anonymous function that not any variable track reference
+	}
+}
 </pre>
+
+        <h4> output </h4>
         
 <pre class="console2">
-
+override function functionality
 </pre>
 
     </div>

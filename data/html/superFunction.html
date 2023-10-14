@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/.html
+-	HTML : ./data/html/superFunction.html
 -->
 <html lang="en">
 
@@ -29,18 +29,72 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> super function </h1>
+        
+        <ul>
+            <li> than we call subclass constructor it call your superclass constructor after firstline of code. </li>
+            <li> if superclass have no default constructor so require call perimeter constructor. </li>
+            <li> super() function is use to call superclass argument constructor. </li>
+            <li> super() always write in the subclass constructor first line. </li>
+        </ul>
+        
+        <h3> flow control </h3>
+        
+        <ol>
+            <li> call subclass object call to subClass Constructor. </li>
+	        <li> subClass Constructor call to superClass Constructor. </li>
+	        <li> SuperClass Constructor scan SuperClass. </li>
+	        <li> After Scan SuperClass complete constructor code. </li>
+	        <li> Next complete code go back to subclass constructor. </li>
+	        <li> Than subclass constructor scan subclass. </li>
+	        <li> Afterend subclass constructor execute your code. </li>
+	        <li> finally object return sacn classes reference. </li>
+        </ol>
+        
+        <h4> syntax </h4>
         
 <pre class="console3">
-
+super(peimeter);
 </pre>
+
+        <h4> example </h4>
         
 <pre class="console1">
+class SuperClass
+{
+	int n = 10;
 
+	/*SuperClass()
+	{
+		System.out.println(" class A ");
+	}*/
+
+	SuperClass(boolean code)
+	{}
+}
+
+class SubClass extends SuperClass
+{
+	SubClass()
+	{
+		super(true);
+		System.out.println(" class Super "+n);
+	}
+}
+
+class Test
+{
+	public static void main(String args[])
+	{
+		new SubClass();
+	}
+}
 </pre>
+
+        <h4> output </h4>
         
 <pre class="console2">
-
+    class Super 10
 </pre>
 
     </div>

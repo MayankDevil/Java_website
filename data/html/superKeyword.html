@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/.html
+-	HTML : ./data/html/superKeyword.html
 -->
 <html lang="en">
 
@@ -29,18 +29,58 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> super keyword </h1>
+        
+        <ul>
+            <li> super keyword is use for call superclass vairable that overwrite in subclass. </li>
+            <li> it compulsoary to inheritence. </li>
+            <li> it use to super keyword before variable is overwrite datatype else value. </li>
+        </ul>
+        
+        <h4> syntax </h4>
         
 <pre class="console3">
-
+super.class_variable_name;
 </pre>
+
+        <h4> example </h4>
         
 <pre class="console1">
-
+class SuperClass
+{
+	SuperClass()
+	{
+		System.out.println(" in SuperClass \n o value is "+o+"\n datatype o is "+x);
+	}
+	int x = 10;
+	int o = 12;
+}
+class SubClass extends SuperClass
+{
+	SubClass()
+	{
+		System.out.println(" in SubClas \n o vlaue is "+o+"\n x datatype is "+x+"\n super.o value is "+super.o+"\n suerp.x datatype is "+super.x);
+	}
+	char x = 'A';
+	int o = 10;
+}
+class Test
+{
+	public static void main(String args[])
+	{
+		new SubClass();
+	}
+}
 </pre>
+
+        <h4> output </h4>
         
 <pre class="console2">
-
+ in SubClas
+ o vlaue is 10
+ x datatype is 'A'
+ super.o value is 12
+ suerp.x datatype is 10 
 </pre>
 
     </div>

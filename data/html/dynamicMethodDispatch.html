@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/.html
+-	HTML : ./data/html/dynamicMethodDispatch.html
 -->
 <html lang="en">
 
@@ -29,18 +29,57 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> dynamic method dispatch </h1>
+        
+        <ul>
+            <li> Dynamic Method Dispatch condition require that inheritance. </li>
+            <li> Dynamic Method Dispatch is say that any SuperClass give reference of over SubClass object. </li>
+            <li> but SuperClass reference variable only use your aquire member. </li>
+        </ul>
+        
+        <h4> syntax </h4>
         
 <pre class="console3">
-
+SuperClass reference_object = new SubClass();
 </pre>
+
+        <h4> example </h4>
         
 <pre class="console1">
+class SuperClass
+{
+	void display()
+	{
+	}
+}
+class SubClass extends SuperClass
+{
+	void display()
+	{
+		System.out.println(" i am display ");
+	}
+	void get()
+	{
+		System.out.println(" i am get ");
+	}
+}
+class Test
+{
+	public static void main(String args[])
+	{
+		SuperClass reference_variable = new SubClass();
 
+		reference_variable.display();
+
+        // reference_variable.get();
+	}
+}
 </pre>
+
+        <h4> output </h4>
         
 <pre class="console2">
-
+ i am display
 </pre>
 
     </div>

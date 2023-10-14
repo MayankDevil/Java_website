@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/.html
+-	HTML : ./data/html/interface.html
 -->
 <html lang="en">
 
@@ -29,18 +29,64 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> interface </h1>
+        
+        <ul>
+<li> interface is idea that collect inside declare public abtract function AND initialize public static final variales. </li>
+<li> we are not create interface object. </li>
+<li> we are implements one or multiple interface with class either other interfaces. </li>
+<li> if we are add interface with class so we are overide all fuction another your class is abstract. </li>
+        </ul>
+        
+        <h4> syntax : implements </h4>
         
 <pre class="console3">
-
+Accessspecifer class  classname implements Interface,Interface,...{ //code }
 </pre>
+        
+        <h4> syntax : extends to implements </h4>
+        
+<pre class="console3">
+ACCESSIFER class SubClassName extends SuperClassName implements Interface,Interface,... { //code }
+</pre>
+        
+        <p> if we are add interface and superclass in subclass we follow order. </p>
+
+        <h4> example </h4>
         
 <pre class="console1">
+interface MyIdea
+{
+	void display();
+	int n = 10;
+}
+interface JustIdea
+{
+	int n = 0;
+}
+interface CopyIdea extends MyIdea
+{
+	void display();
+}
+class Test implements CopyIdea,JustIdea
+{
+	public void display()
+	{
+		System.out.println(" JustIdea n is "+JustIdea.n+" MyIdea n is "+MyIdea.n);
+	}
+	public static void main(String args[])
+	{
+		// Test t =
 
+		new Test().display();
+	}
+}
 </pre>
-        
-<pre class="console2">
 
+        <h4> output </h4>        
+
+<pre class="console2">
+JustIdea n is 0 MyIdea n is 10
 </pre>
 
     </div>

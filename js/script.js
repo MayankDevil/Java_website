@@ -35,17 +35,17 @@ try
 
     /*
         -----------
-        |  |
+        | display | set sourceFileData into aside anchor
         -----------
     */
 
     sourceFileData.forEach( element => {
-
-        console.log(element)
-                
+           
         var souceFileURL = `./data/html/${element}.html`
+        
+        anchor = element
             
-        aside.insertAdjacentHTML("beforeend",`<a href='${souceFileURL}' target="myFrame"> ${element} </a>`)            
+        aside.insertAdjacentHTML("beforeend",`<a href='${souceFileURL}' target="myFrame"> ${ anchor } </a>`)
     })
 
     /*
@@ -55,14 +55,48 @@ try
    	*/
 
     document.getElementById('menu_button').onclick = () => (active)? menu_close() : menu_open();
-
     /*
     	-----------------------------------------------------------
 		| aside anchore function | onclick close menu
 		-----------------------------------------------------------
-
-    document.querySelectorAll('#aside > a').forEach(i => { i.onclick = () => menu_close() });
     */
+    
+    document.querySelectorAll('#aside > a').forEach(function(i)
+    {
+        i.onclick = () => menu_close()
+    });
+    
+    /*
+        ----------------------
+        [ SEARCHBAR FUNCTION ] ========================================
+        ----------------------
+    */
+    let searchBar = document.getElementById('searchBar')
+
+    let asidelinks = document.querySelectorAll('#aside  a')
+    
+    // search function : on key press loop to match value to anchor
+    
+    searchBar.onkeyup = function()
+    {    
+        let search = searchBar.value.toUpperCase();
+
+        for(let i = 0; i < asidelinks.length; i++)
+        {
+            let a = asidelinks[i];
+
+            let data = a.textContent || a.innerHTML;
+
+            if(data.toUpperCase().indexOf(search) > -1)
+            {
+                asidelinks[i].style.display = "block";
+            }
+            else
+            {
+                asidelinks[i].style.display = "none";
+            }
+        }
+    }
     
     document.title = "Mayank"
 }
