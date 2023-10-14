@@ -60,9 +60,9 @@ try
     	-----------------------------------------------------------
 		| aside anchore function | onclick close menu
 		-----------------------------------------------------------
-    */
 
     document.querySelectorAll('#aside > a').forEach(i => { i.onclick = () => menu_close() });
+    */
     
     document.title = "Mayank"
 }

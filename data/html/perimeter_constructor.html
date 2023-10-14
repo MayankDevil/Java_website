@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/.html
+-	HTML : ./data/html/perimeter_constructor.html
 -->
 <html lang="en">
 
@@ -29,18 +29,42 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> perimeter constructor </h1>
+        
+        <ul>
+            <li> perimeter constructor is same like constructor but they not call without pass arguments. </li>
+            <li> if we have only perimeter constructor so we not create object without give arguments. </li>
+        </ul>
+        
+        <h4> syntax </h4>
         
 <pre class="console3">
-
+ClassName (datatype argument_name) { // code }
 </pre>
+
+        <h4> example </h4>
         
 <pre class="console1">
-
+class Hello
+{
+	Hello(boolean args)
+	{
+		System.out.println(" if pass arguments than it is execute");
+	}
+}
+class Test
+{
+	public static void main(String args[])
+	{
+		new Hello(true);
+	}
+}
 </pre>
+
+        <h4> output </h4>
         
 <pre class="console2">
-
+ if pass arguments than it is execute
 </pre>
 
     </div>

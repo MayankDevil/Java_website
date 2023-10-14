@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/constructor.html
+-	HTML : ./data/html/variable.html
 -->
 <html lang="en">
 
@@ -29,39 +29,60 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1> constructor </h1>
+        <h1> variable </h1>
         
         <ul>
-            <li> constructor is special type function of class without any return type. </li>
-            <li> it call by create object of class. </li>
-            <li> in java constructor have must in class if program not create any constructor compiler create public accessifer default constructor. </li>
-            <li> if program define any constructor so compiler never create any constructor in bytecode. </li>
-            <li> we are not create object without constructor. </li>
-            <li> constructor are three type. </li>
+            <li> a name of container on memory address that can store any value inside. </li>
+            <li> in Java variable is two type ( <b>instance</b> OR <b>local</b> ) variables. </li>
+            <li> instance variable scope inside class other hand local varaible scope inside function. </li>  
+            <li> instance variable have default value but local not any value </li>
         </ul>
         
-        <h4> syntax </h4>
+        <h3> instance variable default value </h3>
         
 <pre class="console3">
-ClassName( ) { //code }
+[ 0 ]   integer
+
+[ false ]   boolean
+
+[ 0.0 ]   floating
+
+[ ' ' ]   charactor
+</pre>
+
+        <h3> Declare variable </h3>
+<pre class="console3">
+datatype vairable_name;
+</pre>
+
+        <h3> Assign variable </h3>
+<pre class="console3">
+vairable_name = value;
+</pre>
+
+        <h3> Insalize variable </h3>
+<pre class="console3">
+datatype vairable_name = value;
 </pre>
 
         <h4> example </h4>
         
 <pre class="console1">
-class A
-{
-	A()
-	{
-		System.out.println(" class A default constructor ");
-	}
-	// if we are not create default constructor so we are not use class without pass arguments in construcotor
-}
 class Test
 {
+    boolean data; // instance variables
+    
 	public static void main(String args[])
 	{
-		new A(); // call default constructor
+	    // local variables
+	    
+	    int n;  // declare
+	    
+	    n = 0;  // assign
+	    
+	    int num = 1; // insalize
+	    
+        System.out.println(n+" "+num+" "+data);
 	}
 }
 </pre>
@@ -69,7 +90,7 @@ class Test
         <h4> output </h4>
         
 <pre class="console2">
- class A default constructor
+0 1 false
 </pre>
 
     </div>

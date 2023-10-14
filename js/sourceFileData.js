@@ -13,7 +13,7 @@ try
    	*/
     var sourceFileData = [
         "hello",
-        "statement",
+        "variable",
         "cmdline_args",
         "datatype",
         "operator",
