@@ -314,6 +314,7 @@ ol li
         left: 5%;
         top: 10% !important;
         border-radius: 1rem !important;
+        box-shadow: none;
     }
     #aside a {
         margin: 0 1rem !important;
