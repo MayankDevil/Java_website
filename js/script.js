@@ -43,7 +43,11 @@ try
            
         var souceFileURL = `./data/html/${element}.html`
         
-        anchor = element
+        var strings = element
+                
+        let anchor = strings.charAt(0).toUpperCase() + strings.slice(1);
+        
+        anchor = anchor.split('_').join(" ")
             
         aside.insertAdjacentHTML("beforeend",`<a href='${souceFileURL}' target="myFrame"> ${ anchor } </a>`)
     })
@@ -55,6 +59,7 @@ try
    	*/
 
     document.getElementById('menu_button').onclick = () => (active)? menu_close() : menu_open();
+    
     /*
     	-----------------------------------------------------------
 		| aside anchore function | onclick close menu
@@ -71,6 +76,7 @@ try
         [ SEARCHBAR FUNCTION ] ========================================
         ----------------------
     */
+    
     let searchBar = document.getElementById('searchBar')
 
     let asidelinks = document.querySelectorAll('#aside  a')
