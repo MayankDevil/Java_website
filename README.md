@@ -1,6 +1,6 @@
 # website-7
 
-- Name : "LearnCoreJava"
+- Name : "LearnJavaLanguage"
 
 - Description : "Learn Core Java with notes and source code example"
 
@@ -8,9 +8,9 @@
 
 - Update : 23-09-2023
 
-- Status : Active
+- Status : ACTIVE
 
-- Responsive : False
+- Responsive : True
 
 - TecStack : { HTML | CSS | JavaScript }
 
@@ -38,7 +38,7 @@
 
 ### Responsive
 
-**Breakpoints** { 576 | 7681200 }
+**Breakpoints** { 576 | 768 | 1200 }
 
 ### Theme Mode
 

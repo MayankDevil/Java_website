@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/accessspecifier.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> accessspecifier </h1>
+        
+        <ul>
+            <li> AccessSpecifier is the define access control mean scope of all classes, functions and variables. </li>
+            <li> it is keywords they use before classes and they members (not include default). </li>
+            <li> Java 4type AccessSpecifier in order <b>(lowest to highest)</b> scope = </li>
+
+<pre class="console2">
+[
+	1 : private
+	
+	2 : default
+	
+	3 : protected
+	
+	4 : public
+]
+</pre>
+
+        </ul>
+        
+        <h3> access scope </h3>
+        
+<pre class="console3">
+								SamePackage							OtherPackage
+									|									|
+					---------------------------------				-----------------
+					|				|				|				|				|
+
+	Access		SameClass		SubClass		OtherClass		SubClass		OtherClass
+
+	private			X				-				-				-				-
+
+	default			X				X				X				-			 	-
+
+	protected		X				X				X				X			 	-
+
+	public 			X				X				X				X			 	X
+</pre>     
+        
+
+
+        <h3> [<b> important </b>] </h3>
+        
+        <ul>
+            <li> private is very small scope only self class. </li>
+            <li> default is not any keyword. </li>
+            <li> if you are not default any accessspecifier is be default. </li>
+            <li> public class is once in one source_file. </li>
+            <li> public class have be same name of source_filename. </li>
+        </ul>
+
+        <h4> example </h4>
+        
+<pre class="console1">
+//public class AccessSpecifier
+public class accessspecifier
+{
+
+}
+//protected class Hello
+class Hello
+{
+	public int x = 6;
+	private int n = 5;
+
+	protected void display()
+	{
+		System.out.println("private n access : "+n);
+	}
+}
+class Test
+{
+	public static void main(String args[])
+	{
+		Hello hello = new Hello();
+
+		hello.display();
+
+		System.out.println("public x access : "+hello.x);
+
+//		System.out.println(hello.n);
+	}
+}
+</pre>
+
+        <h4> output </h4>
+        
+<pre class="console2">
+accessspecifier.java:6: error: class AccessSpecifier is public, should be declared in a file named AccessSpecifier.java
+public class AccessSpecifier
+       ^
+accessspecifier.java:10: error: modifier protected not allowed here
+protected class Hello
+
+accessspecifier.java:21: error: modifier private not allowed here
+private class Test
+        ^
+accessspecifier.java:32: error: n has private access in Hello
+		System.out.println(hello.n);
+		                        ^
+4 errors
+
+------------------------------------------------------------
+private n access : 5
+public x access : 6
+</pre>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->

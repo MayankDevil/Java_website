@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/.html
+-	HTML : ./data/html/byteOriented.html
 -->
 <html lang="en">
 
@@ -29,18 +29,102 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> byte oriented </h1>
+      
+        <ul>
+            <li> byte Oriented mean deal in binary (0 & 1). </li>
+            <li> byte Oriented Superime (top most) classes are InputStream and OutputStream. </li>
+            <li> byte Oriented Superime Classes in <b>"java.io"</b> <a href='./package.html'> package </a>. </li>
+
+<pre class='console2'>
+
+public abstract class java.io.InputStream implements java.io.Closeable {}
+
+public abstract class java.io.OutputStream implements java.io.Closeable, java.io.Flushable {}
+
+</pre>
+
+            <li> both abstract classes but they object present in <b>"java.lang.System"</b>. </li>
+
+
+<pre class='console2'>
+
+System
+{
+    public static final java.io.InputStream in;
+
+    public static final java.io.OutputStream out;
+}
+
+</pre>
+        </ul>
+		
+	    <h3> input statement </h3>
+                
+        <ul>
+            <li> Byte oriented method take all datatype Input not include (charactor). </li>
+            <li> Byte oriented input take by Scanner class. </li>
+        </ul>
+      
+        <h4> syntax : input </h4>  
         
 <pre class="console3">
-
+new java.util.Scanner(System.in).next();
 </pre>
+
+
+        <h3> output statement </h3>
+                
+        <ul>
+            <li> <b> System </b>  : is class inside "java.lang" package </li>
+            <li> <b> out </b>     : is object of jva.io.OutputStream  </li>
+            <li> <b> print() </b>  : is function of OutputStream class </li>
+        </ul>
+
+        <h4> syntax : output </h4>
+        
+<pre class="console3">
+java.lang.System.out.print(" // code ");
+</pre>
+
+        <h4> example </h4>
         
 <pre class="console1">
+class Test
+{
+	public static void main(String args[])
+	{
+		java.util.Scanner input = new java.util.Scanner(System.in);
 
+		System.out.print("\n enter number = ");
+
+		int n = input.nextInt();
+
+		System.out.print("\n enter decimal = ");
+
+		float f = input.nextFloat();
+
+		System.out.print("\n enter string = ");
+
+		String s = input.next();
+
+		System.out.print("\n enter boolean = ");
+
+		boolean b = input.nextBoolean();
+
+		System.out.println(" "+n+" "+f+" "+s+" "+b);
+	}
+}
 </pre>
+
+        <h4> output </h4>
         
 <pre class="console2">
-
+ enter number = 1
+ enter decimal = 0.1
+ enter string = hello sir
+ enter boolean = flase
+ 1 0.1 hello false
 </pre>
 
     </div>

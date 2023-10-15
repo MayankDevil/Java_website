@@ -39,18 +39,19 @@ try
         "interface",
         "package",
         "accessspecifier",
+        "exception",
         "throws",
         "try_catch",
         "tryCatchFinally",
         "throw",
         "byteOriented",
         "charactorOriented",
-        "string",
-        "stringBuffer",
         "array",
         "2d_array",
         "jacked_array",
-        "foreach_loop"
+        "foreach_loop",
+        "string",
+        "stringBuffer"
     ]
 }
 catch(error)

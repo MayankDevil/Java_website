@@ -198,7 +198,11 @@ p
 }
 b
 {
-    font-style:italic;
+    background:var(--gray);
+}
+a:hover
+{
+    color:var(--primary);
 }
 ul
 {
@@ -251,6 +255,7 @@ ol li
 .console3
 {
     margin:1rem;
+    color:var(--white);
     background:var(--gray);
 }
 :is(.console1,.console2,.console3)::-webkit-scrollbar
