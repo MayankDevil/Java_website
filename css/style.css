@@ -12,7 +12,8 @@
     outline: none;
     box-sizing: border-box;
 }
-:root{
+:root
+{
     --white:#ffffff;
     --light:#f8f9fa;
     --primary:#ffeeba;
@@ -20,85 +21,95 @@
     --dark:#6c757d;
     --black:#343a40;
 }
-::-webkit-scrollbar{
-    width: 10px;
-    background: transparent;
+::-webkit-scrollbar
+{
+    background: var(--light);
 }
-::-webkit-scrollbar-thumb{
-    background: transparent;
-    border: 1px solid var(--primary);
-    border-radius: 1rem;
+::-webkit-scrollbar-thumb
+{
+    background: var(--black);
 }
-::selection{
-    color:var(--dark);
+::selection
+{
+    color:var(--white);
+    background:var(--black);
 }
-::marker{
-    list-style:symbols();
-    color:var(--dgreen);
+::marker
+{
+    color:var(--secondary);
 }
-#main{
+#main
+{
     display: grid;
     grid-template-columns:3fr 1fr;
+    max-width:1000px;
+    margin:auto;
 }
 /*
-    body css -------------------------------
+    body css ---
 */
-body{
-    background-color: var(--white);
+body
+{
+    background: var(--light);
 }
 /*
-aside css ------------------------------
+    aside css ---
 */
-#aside{
+#aside
+{
     position: sticky;
     top:0;
     width: 100%;
     height: 100vh;
-    background: var(--primary);
     padding:2rem  0;
-    background-color: var(--light);
+    background: var(--white);
 }
-#aside a{
+#aside a
+{
     display: block;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
-#aside a:hover{
-    color:var(--black);
-    background-color: var(--primary);
+#aside a:hover
+{
+    opacity:0.6;
 }
 /*
-    section css -----------------------------
+    section css ---
 */
-#section{
+#section
+{
     width: 100%;
 }
-#header{
+#header
+{
     position: sticky;
     top:0;
     display: flex;
     align-items:center;
     justify-content: space-between;
     padding: 0 2rem;
-    background: var(--light);
+    background:var(--light);
 }
-#menu_button{
+#menu_button
+{
     margin:0.5rem;
     padding: 0.5rem;
     font-size: 1.5rem;
     background: transparent;
-    border-radius:10px;
 }
-#menu_button:hover{
-    box-shadow: 1px 1px 10px var(--lgreen);
+#menu_button:hover
+{
+    opacity:0.5;
 }
-h2{
+h2
+{
     font-weight: bolder;
-    color:var(--black);
 }
 /*
-    content css -----------------------------
+    content css ---
 */
-#content{
+#content
+{
     padding: 2rem 1rem;
 }
 h1,h3,h4,h5,h6
@@ -131,14 +142,14 @@ mark
     background:var(--primary);
 }
 /*
-    footer css ------------------------------
+    footer css ----
 */
 #footer
 {
     padding: 2rem;
     font-weight:normal;
     color:var(--black);
-    background: var(--light);
+    border-top:1px solid var(--dark);
 }
 #footer a
 {
@@ -146,9 +157,10 @@ mark
     font-weight:600;
 }
 /*
-    responsive css ------------------------------
+    responsive css ----
 */
-@media screen and (max-width:600px) {
+@media screen and (max-width:600px)
+{
     #main
     {
         grid-template-columns: 1fr !important;
