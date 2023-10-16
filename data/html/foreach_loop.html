@@ -29,18 +29,80 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> foreach loop </h1>
+        
+        <ul>
+            <li> foreach loop is special type loop that purpose to execute array. </li>
+            <li> this is execute until to than next reference is not null. </li>
+            <li> it similear control flow like linked list traversal function </li>
+        </ul>
+        
+        <h3> control flow </h3>
+        
+        <ol>
+            <li> array variable take head node reference. </li>
+	        <li> that arry variable store in element. </li>
+	        <li> and array reference set next index. </li>
+	        <li> after execute to end block. </li>
+	        <li> repeat loop(1) until to next refernce is not null. </li>
+        </ol>
+        
+        <h4> syntax </h4>
         
 <pre class="console3">
-
+for (datatype element_name : array) { //code }
 </pre>
+
+        <h4> example </h4>
         
 <pre class="console1">
+class Test
+{
+	public static void main(String args[])
+	{
+		int array[] = {1,2,3,4};	// insalize array at time not compulsary set size
 
+		for (int i : array)
+		{
+			System.out.println(i);
+		}
+
+		System.out.println("2D Array");
+
+		int array2[][] = {
+			{1,2,3},
+			{4,5,6},
+			{7,8,9}
+		};						// insalize 2D array at time not compulsary set size
+
+		for (int o = 0; o < array2[0].length; o++)
+		{
+			for (int i : array2[o])
+			{
+				System.out.println(i);
+			}
+		}
+	}
+}
 </pre>
+
+        <h4> output </h4>
         
 <pre class="console2">
-
+1
+2
+3
+4
+2D Array
+1
+2
+3
+4
+5
+6
+7
+8
+9
 </pre>
 
     </div>

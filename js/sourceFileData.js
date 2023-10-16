@@ -13,6 +13,7 @@ try
    	*/
     var sourceFileData = [
         "hello",
+        "java_feature",
         "variable",
         "cmdline_args",
         "datatype",

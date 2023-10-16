@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/.html
+-	HTML : ./data/html/2d_array.html
 -->
 <html lang="en">
 
@@ -29,18 +29,104 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> two dimensions array  </h1>
         
-<pre class="console3">
+        <ul>
+            <li> 2D Array is method to store array inside multiple array. </li>
+            <li> it array have two dimentaional array (row and column). </li>
+            <li> 2d array is dynamic in Java. </li>
+            <li> default value is set. </li>
+        </ul>
+        
+        <h3> explain </h3>
+        
+<pre class='console2'>
+ [0]	[1]		[2]
+  |		 |		 |
+{(1)	(2)		(3)}    [0]
 
+{(4)	(5)		(6)}    [1]
+
+{(7)	(8)		(9)}    [2]
+
+[0][1] = 2
+[2][2] = 9
+
+in 2Dimenstional Array we have row inside column
 </pre>
+
+
+        <ol>
+
+            <li> <h4> syntax : declartion </h4> </li>
+            
+<pre class="console3">
+datatype array_name[][];
+</pre>
+        
+            <li> <h4> syntax : memory allocation </h4> </li>
+            
+<pre class="console3">
+array_name = new dataype[Column_Size][Row_Size];
+</pre>
+
+            <li> <h4> syntax : assign </h4> </li>
+            
+<pre class="console3">
+array_name[index][index] = value;
+</pre>
+
+        </ol>
+
+        <h4> syntax : insalization = ( assign at declaration time ) </h4>
+            
+<pre class="console3">
+datatype array_name[][] = { {value, ...}, ... };
+</pre>
+
+        <h4> example </h4>
         
 <pre class="console1">
+class Test
+{
+	public static void main(String args[])
+	{
+		int a[][];
 
+		a = new int[3][3];
+
+		a[0][0]	= 1;
+		a[0][1]	= 2;
+		a[0][2]	= 3;
+
+		a[1][0]	= 4;
+		a[1][1]	= 5;
+		a[1][2]	= 6;
+
+		a[2][0]	= 7;
+		a[2][1]	= 8;
+		a[2][2]	= 9;
+
+		for (int o = 0; o < a.length; o++)
+			for (int i = 0; i < a[o].length; i++)
+				System.out.println("index["+o+"]["+i+"]"+a[o][i]);
+
+	}
+}
 </pre>
+
+        <h4> output </h4>
         
 <pre class="console2">
-
+index[0][0]1
+index[0][1]2
+index[0][2]3
+index[1][0]4
+index[1][1]5
+index[1][2]6
+index[2][0]7
+index[2][1]8
+index[2][2]9
 </pre>
 
     </div>

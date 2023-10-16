@@ -3,7 +3,7 @@
 -	website-7 "LearnCoreJava"
 -	Developed | Designed by Mayank
 -	Copyright by Mayank
--	HTML : ./data/html/.html
+-	HTML : ./data/html/jacked_array.html
 -->
 <html lang="en">
 
@@ -29,20 +29,87 @@
     -->
     <div class="container_fluid" id="">
         
-        <h1>  </h1>
+        <h1> jacked array </h1>
         
+        <ul>
+            <li> jacked array is array inside array. </li>
+            <li> different index difference size define. </li>
+            <li> it not matrix like structure. </li>
+        </ul>
+        
+        <h3> explain </h3>
+        
+<pre class='console2'>
+{X}	[0]	[1]	[2]
+
+[0]	(1)	(2)	(3)
+
+[1]	(4)
+
+[2]	(5)	(6)
+</pre>
+
+        <h4> syntax : declartion </h4>
+            
 <pre class="console3">
-
+datatype array[][] = new datatype[Size][];
 </pre>
-        
+
+        <h4> syntax : insalization = ( assign at declaration time ) </h4>
+            
+<pre class="console3">
+array[index] = new datatype[size];
+array[index] = new datatype[size];
+array[index] = new datatype[size];
+</pre>
+
+        <h4> example </h4>
+
 <pre class="console1">
+class Test
+{
+	public static void main(String args[])
+	{
+		// declare
 
+		int a[][] = new int[3][];
+
+		// memory allocation
+
+		a[0] = new int[3];
+		a[1] = new int[1];
+		a[2] = new int[2];
+
+		// assign
+
+		a[0][0] = 1;
+		a[0][1] = 2;
+		a[0][2] = 3;
+
+		a[1][0] = 4;
+
+		a[2][0] = 5;
+		a[2][1] = 6;
+
+		// traversal
+
+		for (int o = 0; o < a[0].length; o++)
+			for (int i : a[o])
+				System.out.println(i);
+	}
+}
 </pre>
+
+        <h4> output </h4>
         
 <pre class="console2">
-
+1
+2
+3
+4
+5
+6
 </pre>
-
     </div>
     <!--
     	----------
