@@ -14,6 +14,7 @@ try
     var sourceFileData = [
         "hello",
         "java_feature",
+        "java_compare",
         "variable",
         "cmdline_args",
         "datatype",
