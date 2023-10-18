@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/method_overload.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> method overload </h1>
+        
+        <ul>
+            <li> overload is situation than over method is fail by arguments. </li>
+            <li> so solving this problem we create overloading function accroding to arguments. </li>
+            <li> we are create multiple function with same name but different arguments and different return type. </li>
+            <li> it compiler responsiblity to select funtion according arguments. </li>
+            <li> contructor is also a function that we are protect to overload. </li>
+        </ul>
+
+        <h4> example </h4>
+        
+<pre class="console1">
+class Test
+{
+	Test()
+	{
+		System.out.println("hello ");
+	}
+	Test(boolean args)
+	{
+		System.out.println(" hello true ");
+	}
+	public static void main(String args[])
+	{
+		Test t = new Test();
+
+		new Test(true);
+
+		System.out.println(t.punk(2));
+		// System.out.println(t.punk(2));
+		System.out.println(t.punk(2,3));
+	}
+	int punk(int n)
+	{
+		return (n + 1);
+	}
+	/*float punk(int n)
+	{
+		return (n);
+	}*/
+	float punk(int n1, int n2)
+	{
+		return (n1 / n2);
+	}
+}
+</pre>
+        
+        <h4> output </h4>
+        
+<pre class="console2">
+3
+0.6666666666666666 
+</pre>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->

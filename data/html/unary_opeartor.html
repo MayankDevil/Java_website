@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/unary_operator.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> Operators in Java </h1>
+     
+        <p> in computer programming, an opeator is a symbol or character that represents a specific operation to be performed on one or more operands. OPerators are used to manipulator or perform calculations on data. They fundamental to building and performing operations in code. </p>
+        
+        <ol>
+            <li> Unary Operator </li>
+            <li> Binary Operator </li>
+            <li> Ternary Operator </li>
+        </ol>
+        
+        <h3> unary operator </h3>
+        
+        <ul>
+            <li> if opertor perform operation upon singal operand.</li>
+            <li> we have been only tow unary operator {<b>incremetn</b> & <b>decrement</b>}. </li>
+            <li> Unary increment operator increase 1 value of oprend. </li>
+        </ul>
+        
+        <h4> syntax : increment </h4>
+        
+<pre class="console3">
+operand++;
+++operand;
+</pre>
+
+        <h4> syntax : decrement </h4>
+        
+<pre class="console3">
+operand--;
+--operand;
+</pre>
+
+        <h4> example </h4>
+        
+<pre class='console1'>
+class Test
+{
+	public static void main(String args[])
+	{
+		int n = 12;
+
+		System.out.println("Increment "+(n++)+" "+(++n)+"\nDecrement"+(--n)+" "+(n--));
+	}
+}
+</pre>
+
+        <h4> output </h4>
+        
+<pre class="console2">
+Increment 12 14
+Decrement13 13
+</pre>
+
+        <a href='./binary_operator.html' class='btn'> Next &#10097; </a>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->

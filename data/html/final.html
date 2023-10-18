@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/final.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> final </h1>
+        
+        <ul>
+            <li> final is keyword that mean commitedlast.
+            <li> final use with { class | function | variable }.
+            <li> if we define final class they not be inherit with other class.
+            <li> we only use final class with create object.
+            <li> we are never use abstract or final keyword with together.
+            <li> if we define final function they not override.
+            <li> if we are define final variable they value not be change.
+        </ul>
+        
+        <h4> syntax : final class </h4>
+        
+<pre class="console3">
+final class ClassName { // code }
+</pre>
+
+        <h4> syntax : final function </h4>
+        
+<pre class="console3">
+accessspecifier final returntype functionName(arguments,...) { // code }
+</pre>
+        
+        <h4> syntax : final varialbe </h4>
+        
+<pre class="console3">
+final datatype variable_name = value;
+</pre>
+
+        <h4> example </h4>
+        
+<pre class="console1">
+class SuperClass
+{
+	final int i = 12;
+
+	final function display()
+	{}
+}
+class SubClass extends SuperClass
+{
+	function display()
+	{
+		System.out.println(" not override final function"+i);
+	}
+}
+class Test
+{
+	public static void main(String args[])
+	{
+		SubClass sub = new SubClass();
+		SuperClass sup = new SuperClass();
+	}
+}
+</pre>
+        
+        <h4> output </h4>
+        
+<pre class="console2">
+./function.java:5: error: duplicate class: Test
+class Test
+^
+final.java:11: error: cannot access function
+	final function display()
+	      ^
+  bad source file: ./function.java
+    file does not contain class function
+    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
+final.java:14: error: cannot inherit from final SuperClass
+class SubClass extends SuperClass
+                       ^
+final.java:16: error: display() in SubClass cannot override display() in SuperClass
+	function display()
+	         ^
+  overridden method is final
+4 errors
+</pre>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->

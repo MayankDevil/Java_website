@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/tryCatchFinally.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> try catch finally </h1>
+        
+        <ul>
+            <li> finally is last block of trycatch that compulsary to execute. </li>
+            <li> we are skip catch between try finllay than finally first execute after expection execute. </li>
+            <li> we are not use finally without try. </li>
+            <li> we are use only once finally with one try statement. </li>
+        </ul>
+        
+        <h4> syntax </h4>
+        
+<pre class="console3">
+try { //exception code } catch(ExceptionClass error_object) { //handling code } finally { //compulsary code }
+</pre>
+
+        <h4> example </h4>
+        
+<pre class="console1">
+class Test
+{
+	public static void main(String args[])
+	{
+		try
+		{
+			System.out.println(3/0);
+		}
+		catch(java.lang.ArithmeticException error)
+		{
+			System.out.println("ZERO IS NOT DIVIDE BY ANY NUMBER, SIR");
+		}
+		catch(java.lang.Exception error)
+		{
+			System.out.println("UNSEENED ERROR "+error);
+		}
+		finally
+		{
+			System.out.println("PROGRAM HAVE SOME EXCEPTION");
+		}
+		System.out.println("execute");
+	}
+}
+</pre>
+
+        <h4> output </h4>
+        
+<pre class="console2">
+PROGRAM HAVE SOME EXCEPTION
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at Test.main(tryCatchFinally.java:21)
+// -------------------------------------------------------
+ZERO IS NOT DIVIDE BY ANY NUMBER, SIR
+PROGRAM HAVE SOME EXCEPTION
+execute
+// -------------------------------------------------------
+tryCatchFinally.java:31: error: 'finally' without 'try'
+		finally
+		^
+1 error
+</pre>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->

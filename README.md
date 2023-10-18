@@ -34,7 +34,7 @@
 
 ### Web Page
 
-![Alt text](./data/LearnCoreJava.png "HomePage")
+![Alt text](./data/LearnJava.png "HomePage")
 
 ### Responsive
 
