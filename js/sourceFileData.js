@@ -18,7 +18,7 @@ try
         "variable",
         "cmdline_args",
         "datatype",
-        "unary_opeartor",
+        "unary_operator",
         "binary_operator",
         "ternary_operator",
         "if_else",

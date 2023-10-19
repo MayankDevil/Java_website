@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+-	website-7 "LearnCoreJava"
+-	Developed | Designed by Mayank
+-	Copyright by Mayank
+-	HTML : ./data/html/.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank</title>
+    <!--
+    	---------
+    	| style |
+    	---------
+    -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    
+    <!--
+    	----------------------------------------------------------------------
+		| main | mother container fluid of the all code
+		----------------------------------------------------------------------
+    -->
+    <div class="container_fluid" id="">
+        
+        <h1> Abstract </h1>
+        
+        
+        <ul>
+            <li> abstract is keyword that mean incompleted. </li>
+            <li> we not create abstract class object. </li>
+            <li> we only use abstract class by inheritance. </li>
+            <li> if inheritance class have abstract funtion so they make your subclass abstract. </li>
+            <li> abstrac keyword use to create abstract function also abstract class. </li>
+            <li> abstract function make class abstract. </li>
+            <li> for unabstract your subclass we complete abstract function by use to function override. </li> 
+        </ul>
+        
+        <h4> syntax </h4>
+        
+<pre class="console3">
+abstract class SuperClassName { abstract returntype functionName(args) { // code } }
+</pre>
+
+        <h4> example </h4>
+        
+<pre class="console1">
+abstract class SuperClass
+{
+	// abstract void display() {}
+}
+class SubClass extends SuperClass
+{
+	/*void display()
+	{
+	}*/
+}
+class Test
+{
+	public static void main(String args[])
+	{
+		new SubClass();
+
+		System.out.println(" execute ");
+	}
+}
+</pre>
+
+        <h4> output </h4>
+        
+<pre class="console2">
+ execute
+</pre>
+
+    </div>
+    <!--
+    	----------
+    	| script |
+    	----------
+    -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
+<!-- the end -->
