@@ -55,7 +55,8 @@ try
         "jacked_array",
         "foreach_loop",
         "string",
-        "stringBuffer"
+        "stringBuffer",
+        "math"
     ]
 }
 catch(error)

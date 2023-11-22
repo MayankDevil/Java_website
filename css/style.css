@@ -60,7 +60,6 @@
     height:100vh;
     width:100%;
     display: flex;
-    //grid-template-columns: 60% 40%;
     overflow:hidden;
 }
 
@@ -100,7 +99,6 @@ body
     font-weight:bolder;
     color: var(--gray);
     background: var(--secondary);
-    // border-radius: 0 1.5rem 1.5rem 0;
 }
 #searchBar
 {
@@ -179,6 +177,11 @@ h2
     width:100%;
     padding:2rem;
 }
+.container_fluid::-webkit-scrollbar
+{
+    width: 0px;
+    height: 0;
+}
 h1,h3,h4,h5
 {
     padding:1rem 0;
@@ -218,7 +221,6 @@ ul li::before
     display:inline-block;
     content:'-';
     font-size:3rem;
-    // border:3px solid var(--gray);
     color:var(--gray);
 }
 ol
@@ -230,7 +232,6 @@ ol li
     margin-left:1rem;
     line-height:2rem;
     font-size:1.1rem;
-    color:;
 }
 mark,
 .console1,
@@ -262,6 +263,8 @@ mark,
 :is(.console1,.console2,.console3)::-webkit-scrollbar
 {
     background: transparent;
+    width: 0;
+    height: 0;
 }
 :is(.console1,.console2,.console3)::-webkit-scrollbar-thumb
 {
